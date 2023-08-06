@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import AuthProviders from "./AuthProviders";
+import Modal from "./Model";
+import ProjectForm from "./ProjectForm";
 
-export { Navbar, Footer, AuthProviders };
+export { Navbar, Footer, Modal, ProjectForm };
