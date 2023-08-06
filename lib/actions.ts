@@ -28,7 +28,7 @@ const client = new GraphQLClient(apiUrl);
 export const fetchToken = async () => {
   try {
     const response = await fetch(`${serverUrl}/api/auth/token`);
-    return response.json();
+    return await response.json();
   } catch (err) {
     throw err;
   }
@@ -42,7 +42,7 @@ export const uploadImage = async (imagePath: string) => {
         path: imagePath,
       }),
     });
-    return response.json();
+    return await response.json();
   } catch (err) {
     throw err;
   }

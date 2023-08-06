@@ -5,6 +5,7 @@ import { NavLinks } from "@/constants";
 import AuthProviders from "./AuthProviders";
 import { getCurrentUser } from "@/lib/session";
 import ProfileMenu from "./ProfileMenu";
+import Button from "./Button";
 
 const Navbar = async () => {
   const session = await getCurrentUser();
@@ -26,7 +27,9 @@ const Navbar = async () => {
         {session?.user ? (
           <>
             <ProfileMenu session={session} />
-            <Link href={"/create-post"}>Share Work</Link>
+            <Link href={"/create-post"}>
+              <Button title="Share work" />
+            </Link>
           </>
         ) : (
           <AuthProviders />
